@@ -11,7 +11,8 @@
         "emanwels.ts",
         "_locales/es-ES/README.md",
         "_locales/ca/README.md",
-        "_locales/ja/README.md"
+        "_locales/ja/README.md",
+        "_locales/es-ES/emanwels-strings.json"
     ],
     "targetVersions": {
         "target": "9.0.12",
