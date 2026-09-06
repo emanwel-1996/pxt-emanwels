@@ -162,7 +162,7 @@ function Morse(object: string): string {
  * Converts Morse code to Latin characters
  * @param object the code to convert
  */
-//% blockNamespace=Emanwels block="convert %Morse to Latin" color=#000000 group="Morse" weight=0
+//% blockNamespace=Emanwels block="convert %object to Latin" color=#000000 group="Morse" weight=0
 function Latin(object: string): string {
     let result: string = "";
     for (const code of object.split(" ")) {
