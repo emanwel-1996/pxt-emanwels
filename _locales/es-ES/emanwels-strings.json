@@ -1,3 +1,6 @@
 {
-    "games.rps|block": "jugar piedra, papel o tijeras por %rounds rondas"
+    "games.rps|block": "juega piedra, papel o tijeras por %rounds rondas",
+    "games.radioRps|block": "juega a piedra, papel o tijeras por radio",
+    "Morse|block": "convierte %object a morse",
+    "Latin|block": "convierte % object a letras"
 }
