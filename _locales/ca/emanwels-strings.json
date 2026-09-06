@@ -1,6 +1,6 @@
 {
-    "games.rps|block": "jugar a piedra, paper, tisores per %rounds rondes",
-    "games.radioRps|block": "jugar a pedra, paper, tisores per ràdio",
-    "Morse|block": "convertir %object a morse",
-    "Latin|block": "convertir %object a letras"
+    "games.rps|block": "juga a piedra, paper, tisores per %rounds rondes",
+    "games.radioRps|block": "juga a pedra, paper, tisores per ràdio",
+    "Morse|block": "converteix %object a morse",
+    "Latin|block": "converteix %object a lletres"
 }
