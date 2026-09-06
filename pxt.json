@@ -8,8 +8,7 @@
     },
     "files": [
         "README.md",
-        "emanwels.ts",
-        "tutorial-info-cache.json"
+        "emanwels.ts"
     ],
     "targetVersions": {
         "target": "9.0.12",
