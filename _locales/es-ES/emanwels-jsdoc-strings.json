@@ -1,3 +1,11 @@
 {
-    "games.rps": ""
+    "Emanwels": "Cualquier función que se le ocurra a Emanwel estará aquí",
+    "rps": "Juega a piedra, papel o tijeras por el número de rondas especificado",
+    "rps|param|rounds": "el número de rondas a jugar",
+    "rps|param|forever": "si reiniciar el juego después de que termine",
+    "radioRps": "Juega a piedra, papel o tijeras contra otra micro:bit mediante radio\nEl grupo de radio debe ser configurado antes de llamar a esta función",
+    "Morse": "Convierte letras a código morse",
+    "Morse|param|object": "el texto a convertir",
+    "Latin": "Convierte código morse a letras",
+    "Latin|param|object": "el texto a convertir"
 }

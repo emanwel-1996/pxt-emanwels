@@ -1,5 +1,5 @@
 /**
- * Any function Emanwel can think of will be here.
+ * Any function Emanwel can think of will be here
  */
 //% block="Emanwel's" color=#6f00ff icon="\u732b" weight=0 groups="['Games', 'Morse']"
 namespace Emanwels {}
@@ -29,9 +29,9 @@ namespace games {
         }
     }
     /**
-     * Plays Rock Paper Scissors for the specified number of rounds.
-     * @param rounds Number of rounds to play.
-     * @param forever Whether to restart the game after it ends.
+     * Plays Rock Paper Scissors for the specified number of round
+     * @param rounds number of rounds to play
+     * @param forever whether to restart the game after it ends
      */
     //% blockNamespace=Emanwels block="play rock paper scissors for %rounds rounds" group="Games" weight=1
     export function rps(rounds: number = 5, forever: boolean = true): void {
@@ -97,8 +97,8 @@ namespace games {
         });
     }
     /**
-     * Plays Rock Paper Scissors against another micro:bit using radio.
-     * The radio group must be configured before calling this function.
+     * Plays Rock Paper Scissors against another micro:bit using radio
+     * The radio group must be configured before calling this function
      */
     //% blockNamespace=Emanwels block="play radio rock paper scissors" group="Games" weight=0
     export function radioRps(): void {
@@ -144,9 +144,8 @@ const l: string[] = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
 const m: string[] = [".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", "-----", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", ".-.-.-", "..--..", "/"];
 
 /**
- * Converts Latin characters to Morse code.
- * @param object The Latin text to convert.
- * @returns The Morse code representation of the text.
+ * Converts Latin characters to Morse code
+ * @param object the text to convert
  */
 //% blockNamespace=Emanwels block="convert %Latin to Morse" group="Morse" weight=1
 function Morse(object: string): string {
@@ -160,9 +159,8 @@ function Morse(object: string): string {
 }
 
 /**
- * Converts Morse code to Latin characters.
- * @param object The Morse code to convert.
- * @returns The Latin text represented by the Morse code.
+ * Converts Morse code to Latin characters
+ * @param object the code to convert
  */
 //% blockNamespace=Emanwels block="convert %Morse to Latin" color=#000000 group="Morse" weight=0
 function Latin(object: string): string {
