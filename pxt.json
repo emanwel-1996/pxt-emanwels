@@ -16,7 +16,8 @@
         "_locales/es-ES/emanwels-jsdoc-strings.json",
         "tutorial-info-cache.json",
         "_locales/ca/emanwels-strings.json",
-        "_locales/ca/emanwels-jsdoc-strings.json"
+        "_locales/ca/emanwels-jsdoc-strings.json",
+        "_locales/ja/emanwels-strings.json"
     ],
     "targetVersions": {
         "target": "9.0.12",
