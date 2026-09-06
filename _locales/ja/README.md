@@ -1,7 +1,7 @@
 # エマヌェル'ズ
 
-**Cool functions:**
-- Latin script to Morse Code converter
-- Morse code to Latin script converter
-- Rock Paper Scissors game
-- Radio Rock Paper Scissors game
+**格好良い関数：**
+- ラテン文字からモールス符号への変換器
+- モールス符号からラテン文字への変換器
+- じゃんけんゲーム
+- 無線じゃんけんゲーム
