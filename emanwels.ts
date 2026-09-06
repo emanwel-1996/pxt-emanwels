@@ -2,7 +2,7 @@
  * Any function Emanwel can think of will be here
  */
 //% block="Emanwel's" color=#6f00ff icon="\u732b" weight=0 groups="['Games', 'Morse']"
-namespace Emanwels { }
+namespace Emanwels {}
 
 // GAMES
 
@@ -56,13 +56,13 @@ namespace games {
         basic.forever((): void => {
             if (wins + losses + draws >= rounds) {
                 basic.showString("GAME OVER!");
-                basic.pause(200)
+                basic.pause(200);
                 if (wins > losses) {
                     basic.showString("YOU WIN!");
                 } else if (wins < losses) {
                     basic.showString("YOU LOSE!");
                 } else {
-                    basic.showString("DRAW!")
+                    basic.showString("DRAW!");
                 }
                 basic.pause(700);
                 basic.showString(`${wins} vs. ${losses}`);
@@ -126,7 +126,7 @@ namespace games {
                 } else {
                     basic.showIcon(IconNames.Sad);
                 }
-                basic.pause(700)
+                basic.pause(700);
                 turn = true;
             }
         });
