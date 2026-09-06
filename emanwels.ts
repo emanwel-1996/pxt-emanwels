@@ -1,3 +1,6 @@
+/**
+ * Any function Emanwel can think of will be here.
+ */
 //% block="Emanwel's" color=#6f00ff icon="\u732b" weight=0 groups="['Games', 'Morse']"
 namespace Emanwels {}
 
@@ -25,6 +28,11 @@ namespace games {
             basic.showIcon(IconNames.Scissors);
         }
     }
+    /**
+     * Plays Rock Paper Scissors for the specified number of rounds.
+     * @param rounds Number of rounds to play.
+     * @param forever Whether to restart the game after it ends.
+     */
     //% blockNamespace=Emanwels block="play rock paper scissors for %rounds rounds" group="Games" weight=1
     export function rps(rounds: number = 5, forever: boolean = true): void {
         let hand: number = 0;
@@ -88,7 +96,10 @@ namespace games {
             }
         });
     }
-
+    /**
+     * Plays Rock Paper Scissors against another micro:bit using radio.
+     * The radio group must be configured before calling this function.
+     */
     //% blockNamespace=Emanwels block="play radio rock paper scissors" group="Games" weight=0
     export function radioRps(): void {
         let hand: number = 0;
@@ -132,6 +143,11 @@ namespace games {
 const l: string[] = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "?", " "];
 const m: string[] = [".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", "-----", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", ".-.-.-", "..--..", "/"];
 
+/**
+ * Converts Latin characters to Morse code.
+ * @param object The Latin text to convert.
+ * @returns The Morse code representation of the text.
+ */
 //% blockNamespace=Emanwels block="convert %Latin to Morse" group="Morse" weight=1
 function Morse(object: string): string {
     let result: string = "";
@@ -143,6 +159,11 @@ function Morse(object: string): string {
     return result.trim();
 }
 
+/**
+ * Converts Morse code to Latin characters.
+ * @param object The Morse code to convert.
+ * @returns The Latin text represented by the Morse code.
+ */
 //% blockNamespace=Emanwels block="convert %Morse to Latin" color=#000000 group="Morse" weight=0
 function Latin(object: string): string {
     let result: string = "";
