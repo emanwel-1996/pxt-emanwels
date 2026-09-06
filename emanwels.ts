@@ -147,7 +147,7 @@ const m: string[] = [".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", ".
  * Converts Latin characters to Morse code
  * @param object the text to convert
  */
-//% blockNamespace=Emanwels block="convert %Latin to Morse" group="Morse" weight=1
+//% blockNamespace=Emanwels block="convert %object to Morse" group="Morse" weight=1
 function Morse(object: string): string {
     let result: string = "";
     for (const letter of object.toUpperCase()) {
