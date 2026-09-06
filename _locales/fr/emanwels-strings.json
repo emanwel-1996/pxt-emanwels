@@ -1,0 +1,7 @@
+{
+    "Emanwels|block": "Emanwel's",
+    "games.rps|block": "jouer à pierre-feuille-ciseaux pendant %rounds manches",
+    "games.radioRps|block": "jouer à pierre-feuille-ciseaux par radio",
+    "Morse|block": "convertir %object en code Morse",
+    "Latin|block": "convertir %object en lettres"
+}
