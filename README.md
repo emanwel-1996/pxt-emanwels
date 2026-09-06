@@ -7,4 +7,4 @@
 
 ---
 
-If you have trouble adding the extension in MakeCode, create a TypeScript file and copy the contents of `Emanwels.ts` into that file.
+If you have trouble adding the extension, create a TypeScript file in MakeCode and copy the contents of `emanwels.ts` into that file.
