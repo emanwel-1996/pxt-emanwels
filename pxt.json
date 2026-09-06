@@ -1,6 +1,6 @@
 {
     "name": "pxt-emanwels",
-    "version": "0.2.0",
+    "version": "0.1.0",
     "description": "Cool functions",
     "dependencies": {
         "core": "*",
@@ -13,8 +13,7 @@
         "_locales/ca/README.md",
         "_locales/ja/README.md",
         "_locales/es-ES/emanwels-strings.json",
-        "_locales/es-ES/emanwels-jsdoc-strings.json",
-        "tutorial-info-cache.json"
+        "_locales/es-ES/emanwels-jsdoc-strings.json"
     ],
     "targetVersions": {
         "target": "9.0.12",
@@ -23,5 +22,16 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "tsprj",
+    "yotta": {
+        "config": {
+            "microbit-dal": {
+                "bluetooth": {
+                    "open": 0,
+                    "whitelist": 1,
+                    "security_level": "SECURITY_MODE_ENCRYPTION_WITH_MITM"
+                }
+            }
+        }
+    }
 }
