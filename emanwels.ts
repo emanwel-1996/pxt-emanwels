@@ -2,7 +2,7 @@
  * Any function Emanwel can think of will be here.
  */
 //% block="Emanwel's" color=#6f00ff icon="\u732b" weight=0 groups="['Games', 'Morse']"
-namespace Emanwels {}
+namespace emanwels {}
 
 // GAMES
 
