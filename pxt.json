@@ -1,17 +1,13 @@
 {
     "name": "pxt-emanwels",
-    "description": "",
+    "description": "Cool functions",
     "dependencies": {
         "core": "*",
-        "radio": "*",
-        "microphone": "*"
+        "radio": "*"
     },
     "files": [
-        "main.ts",
-        "README.md"
-    ],
-    "testFiles": [
-        "test.ts"
+        "README.md",
+        "emanwels.ts"
     ],
     "targetVersions": {
         "target": "9.0.12",
@@ -20,6 +16,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "tsprj",
-    "languageRestriction": "javascript-only"
+    "preferredEditor": "tsprj"
 }
