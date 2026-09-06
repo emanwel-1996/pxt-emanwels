@@ -1,38 +1,11 @@
-
-/**
-* Utilice este archivo para definir funciones y bloques personalizados.
-* Lea más en https://makecode.microbit.org/blocks/custom
-*/
-
-enum MyEnum {
-    //% block="one"
-    One,
-    //% block="two"
-    Two
-}
-
-/**
- * Custom blocks
- */
-//% weight=100 color=#0fbc11 icon=""
-namespace custom {
-    /**
-     * TODO: describe your function here
-     * @param n describe parameter here, eg: 5
-     * @param s describe parameter here, eg: "Hello"
-     * @param e describe parameter here
-     */
-    //% block
-    export function foo(n: number, s: string, e: MyEnum): void {
-        // Add code here
-    }
-
-    /**
-     * TODO: describe your function here
-     * @param value describe value here, eg: 5
-     */
-    //% block
-    export function fib(value: number): number {
-        return value <= 1 ? value : fib(value -1) + fib(value - 2);
-    }
+{
+    "Emanwels": "Qualsevol funció que se li acudeixi a n'Emanwel sera aquí",
+    "rps": "Juga a pedra, paper, tisores pel nombre de rondes especificat",
+    "rps|param|rounds": "el nombre de rondes a jugar",
+    "rps|param|forever": "si reiniciar el joc després que acabi",
+    "radioRps": "Joga a pedra, paper, tisores contra una altra micro:bit mitjançant ràdio\nEl grupo de radio debe ser configurado antes de llamar a esta función",
+    "Morse": "Convierte letras a código morse",
+    "Morse|param|object": "el texto a convertir",
+    "Latin": "Convierte código morse a letras",
+    "Latin|param|object": "el texto a convertir"
 }
