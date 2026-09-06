@@ -3,7 +3,7 @@
     "rps": "Juga a pedra, paper, tisores pel nombre de rondes especificat",
     "rps|param|rounds": "el nombre de rondes a jugar",
     "rps|param|forever": "si reiniciar el joc després que acabi",
-    "radioRps": "Joga a pedra, paper, tisores contra una altra micro:bit mitjançant ràdio\nEl grup de ràdio ha de ser especificat abans de cridar la funció",
+    "radioRps": "Juga a pedra, paper, tisores contra una altra micro:bit mitjançant ràdio\nEl grup de ràdio ha de ser especificat abans de cridar la funció",
     "Morse": "Converteix lletres a codi Morse",
     "Morse|param|object": "el text a convertir",
     "Latin": "Converteix codi Morse a lletres",
