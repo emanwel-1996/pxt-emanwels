@@ -9,6 +9,7 @@
     "files": [
         "README.md",
         "emanwels.ts",
+        "test.blocks",
         "_locales/es-ES/README.md",
         "_locales/ca/README.md",
         "_locales/ja/README.md",
