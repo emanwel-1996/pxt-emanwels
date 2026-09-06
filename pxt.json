@@ -14,7 +14,8 @@
         "_locales/ja/README.md",
         "_locales/es-ES/emanwels-strings.json",
         "_locales/es-ES/emanwels-jsdoc-strings.json",
-        "tutorial-info-cache.json"
+        "tutorial-info-cache.json",
+        "_locales/ca/emanwels-strings.json"
     ],
     "targetVersions": {
         "target": "9.0.12",
