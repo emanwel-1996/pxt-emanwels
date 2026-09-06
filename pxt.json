@@ -8,7 +8,8 @@
     },
     "files": [
         "README.md",
-        "emanwels.ts"
+        "emanwels.ts",
+        "_locales/es-ES/README.md"
     ],
     "targetVersions": {
         "target": "9.0.12",
