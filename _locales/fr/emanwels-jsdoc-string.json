@@ -1,0 +1,11 @@
+{
+    "Emanwels": "Toutes les fonctions auxquelles Emanwel peut penser seront ici",
+    "rps": "Joue à pierre, feuille, ciseaux pendant le nombre de manches spécifié",
+    "rps|param|rounds": "le nombre de manches à jouer",
+    "rps|param|forever": "s'il faut recommencer le jeu après sa fin",
+    "radioRps": "Joue à pierre, feuille, ciseaux contre un autre micro:bit par radio\nLe groupe radio doit être configuré avant d'appeler cette fonction",
+    "Morse": "Convertit des lettres en code Morse",
+    "Morse|param|object": "le texte à convertir",
+    "Latin": "Convertit du code Morse en lettres",
+    "Latin|param|object": "le texte à convertir"
+}
