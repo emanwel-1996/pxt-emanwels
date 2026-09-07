@@ -218,10 +218,12 @@ namespace Emanwels {
                 turn = false;
             }
             if (won) {
+                music.play(music.tonePlayable(Note.C5, music.beat(BeatFraction.Half)), music.PlaybackMode.InBackground);
                 score++;
                 basic.showIcon(IconNames.Happy);
                 basic.pause(100);
             } else {
+                music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.InBackground);
                 basic.showIcon(IconNames.Sad);
                 basic.pause(100);
                 basic.clearScreen();
