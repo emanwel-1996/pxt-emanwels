@@ -9,5 +9,6 @@
     "Emanwels.Morse": "Convierte letras a código morse",
     "Emanwels.Morse|param|object": "el texto a convertir",
     "Emanwels.Latin": "Convierte código morse a letras",
-    "Emanwels.Latin|param|object": "el texto a convertir"
+    "Emanwels.Latin|param|object": "el texto a convertir",
+    "Emanwels.randomValue": "Obtiene un valor de un arreglo"
 }

@@ -3,7 +3,7 @@ music.setVolume(255);
 /**
  * Any function Emanwel can think of will be here
  */
-//% block="Emanwel's" color=#6f00ff icon="\u732b" weight=0 groups="['Games', 'Morse']"
+//% block="Emanwel's" color=#6f00ff icon="\u732b" weight=0 groups="['Games', 'Tools']"
 namespace Emanwels {
     // GAMES
 
@@ -33,10 +33,10 @@ namespace Emanwels {
      * @param rounds number of rounds to play
      * @param forever whether to restart the game after it ends
      */
-    //% block="play rock paper scissors for %rounds rounds" group="Games" weight=3
+    //% block="play rock paper scissors" group="Games" weight=3
     export function rps(rounds: number = 5, forever: boolean = true): void {
         let hand: number = 0;
-        let ohand: number;
+        let opponentsHand: number;
         let turn: boolean = true;
         let wins: number = 0;
         let losses: number = 0;
@@ -83,14 +83,14 @@ namespace Emanwels {
             if (turn) {
                 showHand(hand);
             } else {
-                ohand = randint(0, 2);
-                showHand(ohand);
+                opponentsHand = randint(0, 2);
+                showHand(opponentsHand);
                 basic.pause(400);
-                if (hand === ohand) {
+                if (hand === opponentsHand) {
                     music.play(music.builtinPlayableSoundEffect(soundExpression.yawn), music.PlaybackMode.InBackground);
                     basic.showIcon(IconNames.Asleep);
                     draws++;
-                } else if ((hand + 2) % 3 === ohand) {
+                } else if ((hand + 2) % 3 === opponentsHand) {
                     music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.InBackground);
                     basic.showIcon(IconNames.Happy);
                     wins++;
@@ -174,7 +174,7 @@ namespace Emanwels {
             }
         });
         input.onButtonPressed(Button.B, (): void => {
-            if (turn && button == 1) {
+            if (turn && button === 1) {
                 won = true;
                 turn = false;
             } else if (turn && button != 1) {
@@ -183,7 +183,7 @@ namespace Emanwels {
             }
         });
         input.onButtonPressed(Button.AB, (): void => {
-            if (turn && button == 2) {
+            if (turn && button === 2) {
                 won = true;
                 turn = false;
             } else if (turn && button != 2) {
@@ -197,18 +197,18 @@ namespace Emanwels {
             won = false;
             turn = false;
             basic.pause(randint(300, 1500));
-            if (button == 0) {
+            if (button === 0) {
                 basic.showString("A");
-            } else if (button == 1) {
+            } else if (button === 1) {
                 basic.showString("B");
-            } else if (button == 2) {
+            } else if (button === 2) {
                 basic.showString("+");
             } else {
                 basic.showString("O");
             }
             turn = true;
             while (turn && time > 0) {
-                if (button == 3) {
+                if (button === 3) {
                     if (input.buttonIsPressed(Button.A) || input.buttonIsPressed(Button.B)) {
                         won = false;
                         turn = false;
@@ -238,7 +238,17 @@ namespace Emanwels {
         });
     }
 
-    // MORSE
+    export function simonSays(mode: Mode): void {
+        if (mode === Mode.Buttons) {
+            const originalSequence: string[] = [];
+            const inputtedSequence: string[] = [];
+            basic.forever((): void => {
+
+            });
+        }
+    }
+
+    // TOOLS
 
     const l: string[] = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "?", " "];
     const m: string[] = [".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", "-----", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", ".-.-.-", "..--..", "/"];
@@ -247,7 +257,7 @@ namespace Emanwels {
      * Converts Latin characters to Morse code
      * @param object the text to convert
      */
-    //% block="convert %object to Morse" group="Morse" weight=1
+    //% block="convert %object to Morse" group="Tools" weight=2
     export function Morse(object: string): string {
         let result: string = "";
         for (const letter of object.toUpperCase()) {
@@ -262,7 +272,7 @@ namespace Emanwels {
      * Converts Morse code to Latin characters
      * @param object the code to convert
      */
-    //% block="convert %object to Latin" group="Morse" weight=0
+    //% block="convert %object to Latin" group="Tools" weight=1
     export function Latin(object: string): string {
         let result: string = "";
         for (const code of object.split(" ")) {
@@ -273,4 +283,12 @@ namespace Emanwels {
         return result;
     }
 
+    /**
+     * Gets a random value from an array
+     * @ param array the array to get the value from
+     */
+    //% block="pick a random value from %array=[]" group="Tools" weight=0
+    export function randomValue(array: any[]): string {
+        return array[randint(0, array.length)];
+    }
 }

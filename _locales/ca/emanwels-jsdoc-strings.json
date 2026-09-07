@@ -9,5 +9,7 @@
     "Emanwels.Morse": "Converteix lletres a codi Morse",
     "Emanwels.Morse|param|object": "el text a convertir",
     "Emanwels.Latin": "Converteix codi Morse a lletres",
-    "Emanwels.Latin|param|object": "el text a convertir"
+    "Emanwels.Latin|param|object": "el text a convertir",
+    "Emanwels.randomValue": "Obté un valor aleatori de una llista",
+    "Emanwels.randomValue|param|array": "la llista de què s'obté el valor"
 }

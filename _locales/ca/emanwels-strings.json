@@ -1,11 +1,14 @@
 {
     "Emanwels|block": "Emanwel's",
-    "Emanwels.rps|block": "juga a piedra, paper, tisores per %rounds rondes",
+    "Emanwels.rps|block": "juga a piedra, paper, tisores",
     "Emanwels.radioRps|block": "juga a pedra, paper, tisores per ràdio",
     "Emanwels.reflexes|block": "juga a un joc de reflexos $difficulty",
     "Emanwels.Morse|block": "converteix %object a morse",
     "Emanwels.Latin|block": "converteix %object a lletres",
+    "Emanwels.randomValue|block": "escull un valor aleatori de %array",
     "Difficulty.Easy|block": "fàcil",
-    "Difficulty.Medium|block": "de dificultat mitjana",
-    "Difficulty.Hard|block": "difícil"
+    "Difficulty.Medium|block": "normal",
+    "Difficulty.Hard|block": "difícil",
+    "{id:group}Games": "Jocs",
+    "{id:group}Tools": "Eines"
 }
