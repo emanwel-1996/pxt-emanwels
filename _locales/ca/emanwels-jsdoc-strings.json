@@ -4,6 +4,8 @@
     "Emanwels.rps|param|rounds": "el nombre de rondes a jugar",
     "Emanwels.rps|param|forever": "si reiniciar el joc després que acabi",
     "Emanwels.radioRps": "Juga a pedra, paper, tisores contra una altra micro:bit mitjançant ràdio.\nEl grup de ràdio ha de ser especificat abans de cridar la funció",
+    "Emanwels.reflexes": "Juga a un joc de reflexos.\nPrem el botó mostrat a la pantalla («+» vol dir A+B i «O» vold ir cap botó)",
+    "Emanwels.reflexes|param|difficulty": "la dificultat del joc",
     "Emanwels.Morse": "Converteix lletres a codi Morse",
     "Emanwels.Morse|param|object": "el text a convertir",
     "Emanwels.Latin": "Converteix codi Morse a lletres",

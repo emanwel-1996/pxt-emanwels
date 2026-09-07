@@ -157,7 +157,7 @@ namespace Emanwels {
      * Press the button shown in screen ("+" means A+B and "O" means no button)
      * @param difficulty the difficulty of the game
      */
-    //% block="play a $difficulty reflexes" group="Games" weight=1
+    //% block="play a $difficulty reflexes game" group="Games" weight=1
     export function reflexes(difficulty: Difficulty): void {
         let button: number = 0;
         let turn: boolean = false;

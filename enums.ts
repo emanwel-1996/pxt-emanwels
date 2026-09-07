@@ -1,7 +1,7 @@
 enum Difficulty {
     //% block="easy"
     Easy = 300,
-    //% block="medium"
+    //% block="medium difficulty"
     Medium = 100,
     //% block="hard"
     Hard = 50
