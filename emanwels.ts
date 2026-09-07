@@ -286,6 +286,7 @@ namespace Emanwels {
         });
         basic.forever((): void => {
             turn = false;
+            inputted.length = 0;
             if (mode === Mode.Buttons) {
                 original.push(Emanwels.randomValue(["A", "B", "+"]));
             } else if (mode === Mode.Pins) {
@@ -299,8 +300,12 @@ namespace Emanwels {
                 basic.clearScreen();
                 basic.pause(200);
             }
-            while (!lost) {
-                turn = true;
+            turn = true;
+
+            while (true) {
+                if (lost) {
+                    break;
+                }
             }
         });
     }
