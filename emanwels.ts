@@ -243,14 +243,56 @@ namespace Emanwels {
     export function simonSays(mode: Mode): void {
         let turn: boolean = false;
         let lost: boolean = false;
-        const originalSequence: string[] = [];
-        const inputtedSequence: string[] = [];
+        const original: string[] = [];
+        const inputted: string[] = [];
+        pins.touchSetMode(TouchTarget.P0, TouchTargetMode.Capacitive);
+        pins.touchSetMode(TouchTarget.P1, TouchTargetMode.Capacitive);
+        pins.touchSetMode(TouchTarget.P2, TouchTargetMode.Capacitive);
+        pins.touchSetMode(TouchTarget.LOGO, TouchTargetMode.Capacitive);
+        input.onButtonPressed(Button.A, (): void => {
+            if (turn) {
+                inputted.push("A");
+            }
+        });
+        input.onButtonPressed(Button.B, (): void => {
+            if (turn) {
+                inputted.push("B");
+            }
+        });
+        input.onButtonPressed(Button.AB, (): void => {
+            if (turn) {
+                inputted.push("+");
+            }
+        });
+        input.onPinReleased(TouchPin.P0, (): void => {
+            if (turn) {
+                inputted.push("0");
+            }
+        });
+        input.onPinReleased(TouchPin.P1, (): void => {
+            if (turn) {
+                inputted.push("1");
+            }
+        });
+        input.onPinReleased(TouchPin.P2, (): void => {
+            if (turn) {
+                inputted.push("2");
+            }
+        });
+        input.onLogoUp((): void => {
+            inputted.push("L")
+        });
         basic.forever((): void => {
             turn = false;
             if (mode === Mode.Buttons) {
-                originalSequence.push(Emanwels.randomValue(["A", "B", "+"]));
+                original.push(Emanwels.randomValue(["A", "B", "+"]));
+            } else if (mode === Mode.Pins) {
+                original.push(Emanwels.randomValue(["0", "1", "2", "L"]));
             } else {
-                originalSequence.push(Emanwels.randomValue(["0", "1", "2", "L"]));
+                original.push(Emanwels.randomValue(["A", "B", "+", "0", "1", "2", "L"]))
+            }
+            while (!lost) {
+                turn = true;
             }
         });
     }
