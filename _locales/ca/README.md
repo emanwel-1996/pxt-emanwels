@@ -5,3 +5,4 @@
 - Conversor de codi Morse a lletres
 - Joc de pedra, paper, tisores
 - Joc de pedra, paper, tisores amb ràdio
+- Joc de reflexos

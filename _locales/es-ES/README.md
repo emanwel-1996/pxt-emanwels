@@ -5,3 +5,4 @@
 - Conversor de código morse a letras
 - Juego de piedra, papel o tijeras
 - Juego de piedra, papel o tijeras por radio
+- Juego de reflejos

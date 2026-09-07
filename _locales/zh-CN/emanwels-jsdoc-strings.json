@@ -1,0 +1,13 @@
+{
+    "Emanwels": "埃曼韦尔想到的任何函数都会放在这里",
+    "Emanwels.rps": "按照指定的回合数玩石头、剪刀、布",
+    "Emanwels.rps|param|rounds": "要进行的回合数",
+    "Emanwels.rps|param|forever": "游戏结束后是否重新开始游戏",
+    "Emanwels.radioRps": "通过无线电与另一台micro:bit玩石头、剪刀、布。\n调用此函数前必须设置无线电组",
+    "Emanwels.reflexes": "玩一个反应游戏。\n按下屏幕上显示的按钮（" + "表示A+B，"O"表示不按任何按钮）",
+    "Emanwels.reflexes|param|difficulty": "游戏的难度",
+    "Emanwels.Morse": "将字母转换为摩尔斯电码",
+    "Emanwels.Morse|param|object": "要转换的文本",
+    "Emanwels.Latin": "将摩尔斯电码转换为拉丁字母",
+    "Emanwels.Latin|param|object": "要转换的文本"
+}

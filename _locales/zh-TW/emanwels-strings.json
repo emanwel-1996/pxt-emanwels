@@ -1,0 +1,11 @@
+{
+    "Emanwels|block": "埃曼韋爾的",
+    "Emanwels.rps|block": "玩%rounds回合石頭、剪刀、布",
+    "Emanwels.radioRps|block": "透過無線電玩石頭、剪刀、布",
+    "Emanwels.reflexes|block": "玩$difficulty難度的反應遊戲",
+    "Emanwels.Morse|block": "將%object轉換為摩爾斯電碼",
+    "Emanwels.Latin|block": "將%object轉換為拉丁字母",
+    "Difficulty.Easy|block": "簡單",
+    "Difficulty.Medium|block": "中等難度",
+    "Difficulty.Hard|block": "困難"
+}
