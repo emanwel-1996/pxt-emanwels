@@ -280,7 +280,9 @@ namespace Emanwels {
             }
         });
         input.onLogoUp((): void => {
-            inputted.push("L")
+            if (turn) {
+                inputted.push("L");
+            }
         });
         basic.forever((): void => {
             turn = false;
