@@ -58,10 +58,15 @@ namespace Emanwels {
                 basic.showString("GAME OVER!");
                 basic.pause(200);
                 if (wins > losses) {
+                    music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.InBackground);
                     basic.showString("YOU WIN!");
                 } else if (wins < losses) {
+                    music.play(music.builtinPlayableSoundEffect(soundExpression.hello), music.PlaybackMode.UntilDone);
+                    music.play(music.builtinPlayableSoundEffect(soundExpression.hello), music.PlaybackMode.UntilDone);
+                    music.play(music.builtinPlayableSoundEffect(soundExpression.hello), music.PlaybackMode.InBackground);
                     basic.showString("YOU LOSE!");
                 } else {
+                    music.play(music.builtinPlayableSoundEffect(soundExpression.yawn), music.PlaybackMode.InBackground);
                     basic.showString("DRAW!");
                 }
                 basic.pause(700);
@@ -82,6 +87,7 @@ namespace Emanwels {
                 showHand(ohand);
                 basic.pause(400);
                 if (hand === ohand) {
+                    music.play(music.builtinPlayableSoundEffect(soundExpression.yawn), music.PlaybackMode.InBackground);
                     basic.showIcon(IconNames.Asleep);
                     draws++;
                 } else if ((hand + 2) % 3 === ohand) {
@@ -90,6 +96,9 @@ namespace Emanwels {
                     wins++;
                 } else {
                     basic.showIcon(IconNames.Sad);
+                    music.play(music.builtinPlayableSoundEffect(soundExpression.hello), music.PlaybackMode.UntilDone);
+                    music.play(music.builtinPlayableSoundEffect(soundExpression.hello), music.PlaybackMode.UntilDone);
+                    music.play(music.builtinPlayableSoundEffect(soundExpression.hello), music.PlaybackMode.InBackground);
                     losses++;
                 }
                 basic.pause(700);
@@ -101,7 +110,7 @@ namespace Emanwels {
      * Plays Rock Paper Scissors against another micro:bit using radio
      * The radio group must be configured before calling this function
      */
-    //% blockNamespace=Emanwels block="play radio rock paper scissors" group="Games" weight=1
+    //% block="play radio rock paper scissors" group="Games" weight=1
     export function radioRps(): void {
         let hand: number = 0;
         let turn: boolean = true;
@@ -121,11 +130,16 @@ namespace Emanwels {
         radio.onReceivedNumber((receivedNumber: number): void => {
             if (!turn) {
                 if (hand === receivedNumber) {
+                    music.play(music.builtinPlayableSoundEffect(soundExpression.yawn), music.PlaybackMode.InBackground);
                     basic.showIcon(IconNames.Asleep);
                 } else if ((hand + 2) % 3 === receivedNumber) {
+                    music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.InBackground);
                     basic.showIcon(IconNames.Happy);
                 } else {
                     basic.showIcon(IconNames.Sad);
+                    music.play(music.builtinPlayableSoundEffect(soundExpression.hello), music.PlaybackMode.UntilDone);
+                    music.play(music.builtinPlayableSoundEffect(soundExpression.hello), music.PlaybackMode.UntilDone);
+                    music.play(music.builtinPlayableSoundEffect(soundExpression.hello), music.PlaybackMode.InBackground);
                 }
                 basic.pause(700);
                 turn = true;
@@ -162,7 +176,7 @@ namespace Emanwels {
      * Converts Morse code to Latin characters
      * @param object the code to convert
      */
-    //% blockNamespace=Emanwels block="convert %object to Latin" color=#000000 group="Morse" weight=0
+    //% block="convert %object to Latin" group="Morse" weight=0
     export function Latin(object: string): string {
         let result: string = "";
         for (const code of object.split(" ")) {
