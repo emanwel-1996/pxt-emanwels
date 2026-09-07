@@ -301,9 +301,8 @@ namespace Emanwels {
                 basic.pause(200);
             }
             turn = true;
-
-            while (true) {
-                if (lost) {
+            while (!(inputted.length >= original.length)) {
+                if (inputted.length >= original.length) {
                     break;
                 }
             }
