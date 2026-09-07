@@ -22,7 +22,9 @@
         "_locales/ja/emanwels-jsdoc-strings.json",
         "_locales/fr/README.md",
         "_locales/fr/emanwels-strings.json",
-        "_locales/fr/emanwels-jsdoc-strings.json",
+        "_locales/fr/emanwels-jsdoc-strings.json"
+    ],
+    "testFiles": [
         "test.ts"
     ],
     "targetVersions": {
