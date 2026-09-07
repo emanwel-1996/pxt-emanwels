@@ -1,1 +1,1 @@
-Emanwels.reflexes();
+Emanwels.reflexes(Difficulty.Hard);

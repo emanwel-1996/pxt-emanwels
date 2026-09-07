@@ -152,13 +152,16 @@ namespace Emanwels {
         });
     }
 
-    //% block="play reflexes" group="Games" weight=1
-    //% block="play reflexes" group="Games" weight=1
-    export function reflexes(): void {
+    /**
+     * Plays a reflexes game.
+     * Press the button shown in screen ("+" means A+B and "O" means no button)
+     */
+    //% block="play $difficulty reflexes" group="Games" weight=1
+    export function reflexes(difficulty: Difficulty): void {
         let button: number = 0;
         let turn: boolean = false;
         let won: boolean = false;
-        let time: number = 100;
+        let time: number = difficulty;
         let score: number = 0;
         input.onButtonPressed(Button.A, (): void => {
             if (turn && button == 0) {
@@ -189,7 +192,7 @@ namespace Emanwels {
         });
         basic.forever((): void => {
             button = randint(0, 3);
-            time = 100;
+            time = difficulty;
             won = false;
             turn = false;
             basic.pause(randint(300, 1500));
