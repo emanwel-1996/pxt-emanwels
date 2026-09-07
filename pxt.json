@@ -8,23 +8,16 @@
         "microphone": "*"
     },
     "files": [
-        "README.md",
         "emanwels.ts",
-        "_locales/es-ES/README.md",
-        "_locales/ca/README.md",
+        "enums.ts",
+        "README.md",
+        "tutorial-info-cache.json",
         "_locales/es-ES/emanwels-strings.json",
         "_locales/es-ES/emanwels-jsdoc-strings.json",
-        "tutorial-info-cache.json",
+        "_locales/es-ES/README.md",
         "_locales/ca/emanwels-strings.json",
         "_locales/ca/emanwels-jsdoc-strings.json",
-        "_locales/ja/emanwels-strings.json",
-        "enums.ts",
-        "_locales/zh-CN/README.md",
-        "_locales/zh-CN/emanwels-jsdoc-strings.json",
-        "_locales/zh-CN/emanwels-strings.json",
-        "_locales/zh-TW/README.md",
-        "_locales/zh-TW/emanwels-strings.json",
-        "_locales/zh-TW/emanwels-jsdoc-strings.json"
+        "_locales/ca/README.md"
     ],
     "testFiles": [
         "test.ts"
