@@ -33,8 +33,10 @@ namespace Emanwels {
      * @param rounds number of rounds to play
      * @param forever whether to restart the game after it ends
      */
-    //% block="play rock paper scissors" group="Games" weight=3
-    export function rps(rounds: number = 5, forever: boolean = true): void {
+    //% block="play rock paper scissors for %rounds rounds" group="Games" weight=3
+    //% rounds.shadow="math_number"
+    //% rounds.defl=5
+    export function rps(rounds: number, forever: boolean = true): void {
         let hand: number = 0;
         let opponentsHand: number;
         let turn: boolean = true;
@@ -287,7 +289,8 @@ namespace Emanwels {
      * Gets a random value from an array
      * @ param array the array to get the value from
      */
-    //% block="pick a random value from %array=[]" group="Tools" weight=0
+    //% block="pick a random value from %array" group="Tools" weight=0
+    //% array.shadow="lists_create_with"
     export function randomValue(array: any[]): string {
         return array[randint(0, array.length)];
     }

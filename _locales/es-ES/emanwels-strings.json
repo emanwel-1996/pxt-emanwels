@@ -1,6 +1,6 @@
 {
     "Emanwels|block": "Emanwel's",
-    "Emanwels.rps|block": "jugar a piedra, papel o tijeras",
+    "Emanwels.rps|block": "jugar a piedra, papel o tijeras por %rounds rondas",
     "Emanwels.radioRps|block": "jugar a piedra, papel o tijeras por radio",
     "Emanwels.reflexes|block": "jugar a un juego de reflejos $difficulty",
     "Emanwels.Morse|block": "convertir %object a morse",
