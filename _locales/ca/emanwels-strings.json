@@ -6,6 +6,6 @@
     "Emanwels.Morse|block": "converteix %object a morse",
     "Emanwels.Latin|block": "converteix %object a lletres",
     "Difficulty.Easy|block": "fàcil",
-    "Difficuly.Medium|block": "de dificultat mitjana",
+    "Difficulty.Medium|block": "de dificultat mitjana",
     "Difficulty.Hard|block": "difícil"
 }
