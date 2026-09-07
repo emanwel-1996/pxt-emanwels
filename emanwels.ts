@@ -107,7 +107,7 @@ namespace Emanwels {
         });
     }
     /**
-     * Plays Rock Paper Scissors against another micro:bit using radio
+     * Plays Rock Paper Scissors against another micro:bit using radio.
      * The radio group must be configured before calling this function
      */
     //% block="play radio rock paper scissors" group="Games" weight=1

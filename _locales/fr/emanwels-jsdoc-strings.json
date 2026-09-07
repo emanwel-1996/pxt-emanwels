@@ -3,7 +3,7 @@
     "Emanwels.rps": "Joue à pierre, feuille, ciseaux pendant le nombre de manches spécifié",
     "Emanwels.rps|param|rounds": "le nombre de manches à jouer",
     "Emanwels.rps|param|forever": "s'il faut recommencer le jeu après sa fin",
-    "Emanwels.radioRps": "Joue à pierre, feuille, ciseaux contre un autre micro:bit par radio\nLe groupe radio doit être configuré avant d'appeler cette fonction",
+    "Emanwels.radioRps": "Joue à pierre, feuille, ciseaux contre un autre micro:bit par radio.\nLe groupe radio doit être configuré avant d'appeler cette fonction",
     "Emanwels.Morse": "Convertit des lettres en code Morse",
     "Emanwels.Morse|param|object": "le texte à convertir",
     "Emanwels.Latin": "Convertit du code Morse en lettres",

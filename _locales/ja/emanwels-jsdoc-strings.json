@@ -3,7 +3,7 @@
     "Emanwels.rps": "指定したラウンド数でじゃんけんをする",
     "Emanwels.rps|param|rounds": "プレイするラウンド数",
     "Emanwels.rps|param|forever": "ゲーム終了後にゲームを再開するかどうか",
-    "Emanwels.radioRps": "別のmicro:bitと無線でじゃんけんをする\nこの関数を呼び出す前に無線グループを設定する必要があります",
+    "Emanwels.radioRps": "別のmicro:bitと無線でじゃんけんをする。\nこの関数を呼び出す前に無線グループを設定する必要があります",
     "Emanwels.Morse": "文字をモールス信号に変換する",
     "Emanwels.Morse|param|object": "変換するテキスト",
     "Emanwels.Latin": "モールス信号をラテン文字に変換する",
