@@ -1,7 +1,7 @@
 {
     "Emanwels|block": "Emanwel's",
-    "games.rps|block": "juga a piedra, paper, tisores per %rounds rondes",
-    "games.radioRps|block": "juga a pedra, paper, tisores per ràdio",
-    "Morse|block": "converteix %object a morse",
-    "Latin|block": "converteix %object a lletres"
+    "Emanwels.rps|block": "juga a piedra, paper, tisores per %rounds rondes",
+    "Emanwels.radioRps|block": "juga a pedra, paper, tisores per ràdio",
+    "Emanwels.Morse|block": "converteix %object a morse",
+    "Emanwels.Latin|block": "converteix %object a lletres"
 }

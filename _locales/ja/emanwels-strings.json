@@ -1,7 +1,7 @@
 {
     "Emanwels|block": "エマヌェル'ズ",
-    "games.rps|block": "%roundsラウンドのじゃんけんをする",
-    "games.radioRps|block": "無線でじゃんけんをする",
-    "Morse|block": "%objectをモールス信号に変換する",
-    "Latin|block": "%objectをラテン文字に変換する"
+    "Emanwels.rps|block": "%roundsラウンドのじゃんけんをする",
+    "Emanwels.radioRps|block": "無線でじゃんけんをする",
+    "Emanwels.Morse|block": "%objectをモールス信号に変換する",
+    "Emanwels.Latin|block": "%objectをラテン文字に変換する"
 }

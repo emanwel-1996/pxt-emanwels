@@ -1,12 +1,12 @@
+music.setVolume(255);
+
 /**
  * Any function Emanwel can think of will be here
  */
 //% block="Emanwel's" color=#6f00ff icon="\u732b" weight=0 groups="['Games', 'Morse']"
-namespace Emanwels {}
+namespace Emanwels {
+    // GAMES
 
-// GAMES
-
-namespace games {
     function showHand(hand: number): void {
         if (hand === 0) {
             basic.showLeds(`
@@ -33,7 +33,7 @@ namespace games {
      * @param rounds number of rounds to play
      * @param forever whether to restart the game after it ends
      */
-    //% blockNamespace=Emanwels block="play rock paper scissors for %rounds rounds" group="Games" weight=1
+    //% block="play rock paper scissors for %rounds rounds" group="Games" weight=1
     export function rps(rounds: number = 5, forever: boolean = true): void {
         let hand: number = 0;
         let ohand: number;
@@ -85,6 +85,7 @@ namespace games {
                     basic.showIcon(IconNames.Asleep);
                     draws++;
                 } else if ((hand + 2) % 3 === ohand) {
+                    music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.InBackground);
                     basic.showIcon(IconNames.Happy);
                     wins++;
                 } else {
@@ -100,7 +101,7 @@ namespace games {
      * Plays Rock Paper Scissors against another micro:bit using radio
      * The radio group must be configured before calling this function
      */
-    //% blockNamespace=Emanwels block="play radio rock paper scissors" group="Games" weight=0
+    //% blockNamespace=Emanwels block="play radio rock paper scissors" group="Games" weight=1
     export function radioRps(): void {
         let hand: number = 0;
         let turn: boolean = true;
@@ -136,39 +137,40 @@ namespace games {
             }
         });
     }
-}
+    
+    // MORSE
 
-// MORSE
+    const l: string[] = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "?", " "];
+    const m: string[] = [".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", "-----", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", ".-.-.-", "..--..", "/"];
 
-const l: string[] = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "?", " "];
-const m: string[] = [".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", "-----", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", ".-.-.-", "..--..", "/"];
-
-/**
- * Converts Latin characters to Morse code
- * @param object the text to convert
- */
-//% blockNamespace=Emanwels block="convert %object to Morse" group="Morse" weight=1
-function Morse(object: string): string {
-    let result: string = "";
-    for (const letter of object.toUpperCase()) {
-        if (l.indexOf(letter) >= 0) {
-            result += m[l.indexOf(letter)] + " ";
+    /**
+     * Converts Latin characters to Morse code
+     * @param object the text to convert
+     */
+    //% block="convert %object to Morse" group="Morse" weight=1
+    export function Morse(object: string): string {
+        let result: string = "";
+        for (const letter of object.toUpperCase()) {
+            if (l.indexOf(letter) >= 0) {
+                result += m[l.indexOf(letter)] + " ";
+            }
         }
+        return result.trim();
     }
-    return result.trim();
-}
 
-/**
- * Converts Morse code to Latin characters
- * @param object the code to convert
- */
-//% blockNamespace=Emanwels block="convert %object to Latin" color=#000000 group="Morse" weight=0
-function Latin(object: string): string {
-    let result: string = "";
-    for (const code of object.split(" ")) {
-        if (m.indexOf(code) >= 0) {
-            result += l[m.indexOf(code)];
+    /**
+     * Converts Morse code to Latin characters
+     * @param object the code to convert
+     */
+    //% blockNamespace=Emanwels block="convert %object to Latin" color=#000000 group="Morse" weight=0
+    export function Latin(object: string): string {
+        let result: string = "";
+        for (const code of object.split(" ")) {
+            if (m.indexOf(code) >= 0) {
+                result += l[m.indexOf(code)];
+            }
         }
+        return result;
     }
-    return result;
+
 }
