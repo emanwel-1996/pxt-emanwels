@@ -33,7 +33,7 @@ namespace Emanwels {
      * @param rounds number of rounds to play
      * @param forever whether to restart the game after it ends
      */
-    //% block="play rock paper scissors for %rounds rounds" group="Games" weight=5
+    //% block="play rock paper scissors for %rounds rounds" group="Games" weight=3
     export function rps(rounds: number = 5, forever: boolean = true): void {
         let hand: number = 0;
         let ohand: number;
@@ -110,7 +110,7 @@ namespace Emanwels {
      * Plays Rock Paper Scissors against another micro:bit using radio.
      * The radio group must be configured before calling this function
      */
-    //% block="play radio rock paper scissors" group="Games" weight=4
+    //% block="play radio rock paper scissors" group="Games" weight=2
     export function radioRps(): void {
         let hand: number = 0;
         let turn: boolean = true;
@@ -157,7 +157,7 @@ namespace Emanwels {
      * Press the button shown in screen ("+" means A+B and "O" means no button)
      * @param difficulty the difficulty of the game
      */
-    //% block="play a $difficulty reflexes game" group="Games" weight=3
+    //% block="play a $difficulty reflexes game" group="Games" weight=1
     export function reflexes(difficulty: Difficulty): void {
         let button: number = 0;
         let turn: boolean = false;
