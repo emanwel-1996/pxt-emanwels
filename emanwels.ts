@@ -241,13 +241,18 @@ namespace Emanwels {
     }
 
     export function simonSays(mode: Mode): void {
-        if (mode === Mode.Buttons) {
-            const originalSequence: string[] = [];
-            const inputtedSequence: string[] = [];
-            basic.forever((): void => {
-
-            });
-        }
+        let turn: boolean = false;
+        let lost: boolean = false;
+        const originalSequence: string[] = [];
+        const inputtedSequence: string[] = [];
+        basic.forever((): void => {
+            turn = false;
+            if (mode === Mode.Buttons) {
+                originalSequence.push(Emanwels.randomValue(["A", "B", "+"]));
+            } else {
+                originalSequence.push(Emanwels.randomValue(["0", "1", "2", "L"]));
+            }
+        });
     }
 
     // TOOLS
