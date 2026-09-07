@@ -22,7 +22,7 @@
         "_locales/ja/emanwels-jsdoc-strings.json",
         "_locales/fr/README.md",
         "_locales/fr/emanwels-strings.json",
-        "_locales/fr/emanwels-jsdoc-string.json"
+        "_locales/fr/emanwels-jsdoc-strings.json"
     ],
     "targetVersions": {
         "target": "9.0.12",
