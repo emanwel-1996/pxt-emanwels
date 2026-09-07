@@ -293,6 +293,12 @@ namespace Emanwels {
             } else {
                 original.push(Emanwels.randomValue(["A", "B", "+", "0", "1", "2", "L"]))
             }
+            for (const input of original) {
+                basic.showString(input);
+                basic.pause(300);
+                basic.clearScreen();
+                basic.pause(200);
+            }
             while (!lost) {
                 turn = true;
             }
