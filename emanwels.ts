@@ -33,7 +33,7 @@ namespace Emanwels {
      * @param rounds number of rounds to play
      * @param forever whether to restart the game after it ends
      */
-    //% block="play rock paper scissors for %rounds rounds" group="Games" weight=1
+    //% block="play rock paper scissors for %rounds rounds" group="Games" weight=2
     export function rps(rounds: number = 5, forever: boolean = true): void {
         let hand: number = 0;
         let ohand: number;
@@ -151,7 +151,87 @@ namespace Emanwels {
             }
         });
     }
-    
+
+    //% block="play reflexes" group="Games" weight=1
+    //% block="play reflexes" group="Games" weight=1
+    export function reflexes(): void {
+        let button: number = 0;
+        let turn: boolean = false;
+        let won: boolean = false;
+        let time: number = 100;
+        let score: number = 0;
+        input.onButtonPressed(Button.A, (): void => {
+            if (turn && button == 0) {
+                won = true;
+                turn = false;
+            } else if (turn && button != 0) {
+                won = false;
+                turn = false;
+            }
+        });
+        input.onButtonPressed(Button.B, (): void => {
+            if (turn && button == 1) {
+                won = true;
+                turn = false;
+            } else if (turn && button != 1) {
+                won = false;
+                turn = false;
+            }
+        });
+        input.onButtonPressed(Button.AB, (): void => {
+            if (turn && button == 2) {
+                won = true;
+                turn = false;
+            } else if (turn && button != 2) {
+                won = false;
+                turn = false;
+            }
+        });
+        basic.forever((): void => {
+            button = randint(0, 3);
+            time = 100;
+            won = false;
+            turn = false;
+            basic.pause(randint(300, 1500));
+            if (button == 0) {
+                basic.showString("A");
+            } else if (button == 1) {
+                basic.showString("B");
+            } else if (button == 2) {
+                basic.showString("+");
+            } else {
+                basic.showString("O");
+            }
+            turn = true;
+            while (turn && time > 0) {
+                if (button == 3) {
+                    if (input.buttonIsPressed(Button.A) || input.buttonIsPressed(Button.B)) {
+                        won = false;
+                        turn = false;
+                    }
+                }
+                basic.pause(1);
+                time--;
+            }
+            if (button == 3 && turn) {
+                won = true;
+                turn = false;
+            }
+            if (won) {
+                score++;
+                basic.showIcon(IconNames.Happy);
+                basic.pause(100);
+            } else {
+                basic.showIcon(IconNames.Sad);
+                basic.pause(100);
+                basic.clearScreen();
+                basic.showString("SCORE:");
+                basic.showNumber(score);
+                score = 0;
+            }
+        });
+    }
+
     // MORSE
 
     const l: string[] = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "?", " "];
