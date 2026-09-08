@@ -8,9 +8,6 @@
 - Juego de piedra, papel o tijeras por radio
     - presiona el botón A para cambiar de mano y el botón B para confirmarla
     - el grupo de radio debe ser especificado antes de llamar a la función
-- Juego de reflejos
-    - presiona el botón dependindo de lo que se muestre en pantalla
-    - *A*/*B*: botón A/B, *+*: ambos botones, *O*: ningún botón
 - Juego de memoria
     - presiona la secuencia de botones o pines mostrada en pantalla una vez se termine la mostranza
     - *A*/*B*: botón A/B, *+*: ambos botones, *0/1/2*: pin P0/P1/P2

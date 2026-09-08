@@ -8,9 +8,6 @@
 - Radio Rock Paper Scissors game
     - press button A to switch hands and button B to confirm it
     - the radio group must be set before calling the function
-- Reflexes game
-    - press a button depending on what is shown on the screen
-    - *A*/*B*: button A/B, *+*: both buttons, *O*: no buttons
 - Memory game
     - press the sequence of buttons or pins shown in screen once the display ends
     - *A*/*B*: button A/B, *+*: both buttons, *0*/*1*/*2*: pins P0/P1/P2, *L*: touch logo pin

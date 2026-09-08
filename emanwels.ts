@@ -31,12 +31,11 @@ namespace Emanwels {
     /**
      * Runs a rock paper scissors game for the specified number of round
      * @param rounds number of rounds to play
-     * @param forever whether to restart the game after it ends
      */
     //% block="play rock paper scissors for %rounds rounds" group="Games" weight=3
     //% rounds.shadow="math_number"
     //% rounds.defl=5
-    export function rps(rounds: number, forever: boolean = true): void {
+    export function rps(rounds: number): void {
         let hand: number = 0;
         let opponentsHand: number;
         let turn: boolean = true;
@@ -239,6 +238,7 @@ namespace Emanwels {
 
     /**
      * Runs a memory game
+     * @param mode the mode of the game
      */
     //% block="play a $mode memory game" group="Games"weight=0
     export function memory(mode: Mode): void {

@@ -2,8 +2,6 @@
     "Emanwels": "Cualquier función que se le ocurra a Emanwel estará aquí",
     "Emanwels.rps": "Ejecuta piedra, papel o tijeras por el número de rondas especificado",
     "Emanwels.rps|param|rounds": "el número de rondas a jugar",
-    "Emanwels.rps|param|forever": "si reiniciar el juego después de que termine",
-    "Emanwels.radioRps": "Ejecuta piedra, papel o tijeras contra otra micro:bit mediante radio.\nEl grupo de radio debe ser configurado antes de llamar a esta función",
     "Emanwels.reflexes": "Ejecuta un juego de reflejos.\nPresiona el botón mostrado en la pantalla («+» quiere decir A+B y «O» quiere decir ningún botón)",
     "Emanwels.reflexes|param|difficulty": "la dificultad del juego",
     "Emanwels.memory": "Ejecuta un juego de memoria",

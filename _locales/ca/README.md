@@ -10,7 +10,6 @@
     - el grup de ràdio ha de ser especificat abans de trucar a la funció
 - Joc de reflexos
     - pressiona el botó depenent del que es mostri a la pantalla
-    - *A*/*B*: botó A/B, *+*: ambdós botons, *O*: cap botó
 - Joc de memòria
     - pressiona la seqüència de botons o pins mostrada a la pantalla un cop s'acabi la mostrança
     - *A*/*B*: botó A/B, *+*: ambdós botons, *0/1/2*: pins P0/P1/P2
