@@ -13,7 +13,7 @@
     - *A*/*B*: button A/B, *+*: both buttons, *O*: no buttons
 - Memory Games
     - press the sequence of buttons or pins shown in screen once the display ends
-    - *A*/*B*: button A/B, *+*: both buttons, *0*/*1*/*2*: pins P0/P1/P2, *L*: touch logo pin
+    - *A*/*B*: button A/B, *+*: both buttons, *0*/*1*/*2*: pin P0/1/2, *L*: touch logo pin
     - depending on the mode the sequence will contain only buttons, pins, or both respectively
 ### Tools
 - Latin script to Morse Code converter
