@@ -9,9 +9,8 @@
     - presiona el botón A para cambiar de mano y el botón B para confirmarla
     - el grupo de radio debe ser especificado antes de llamar a la función
 - Juego de memoria
-    - presiona la secuencia de botones o pines mostrada en pantalla una vez se termine la mostranza
+    - presiona la secuencia de botones y pines mostrada en pantalla una vez se termine la mostranza
     - *A*/*B*: botón A/B, *+*: ambos botones, *0/1/2*: pin P0/P1/P2
-    - dependiendo del modo la secuencia constará de solo botones, pines o ambos
 ### Herramientas
 - Conversor de letras a código morse
     - puede usarse como un argumento del tipo cadena

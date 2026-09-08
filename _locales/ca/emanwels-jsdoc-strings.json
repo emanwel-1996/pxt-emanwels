@@ -1,13 +1,12 @@
 {
     "Emanwels": "Qualsevol funció que se li acudeixi a n'Emanwel sera aquí",
-    "Emanwels.rps": "Executa pedra, paper, tisores pel nombre de rondes especificat",
-    "Emanwels.rps|param|rounds": "el nombre de rondes a Executar",
+    "Emanwels.rps": "Executa pedra, paper, tisores per cinc rondes",
     "Emanwels.radioRps": "Executa pedra, paper, tisores contra una altra micro:bit mitjançant ràdio",
     "Emanwels.memory": "Executa un joc de memòria",
-    "Emanwels.Morse": "Converteix lletres a codi Morse",
-    "Emanwels.Morse|param|object": "el text a convertir",
-    "Emanwels.Latin": "Converteix codi Morse a lletres",
-    "Emanwels.Latin|param|object": "el text a convertir",
+    "Emanwels.latinToMorse": "Converteix lletres a codi Morse",
+    "Emanwels.latinToMorse|param|latin": "el text a convertir",
+    "Emanwels.morseToLatin": "Converteix codi Morse a lletres",
+    "Emanwels.morseToLatin|param|morse": "el text a convertir",
     "Emanwels.randomValue": "Obté un valor aleatori de una llista",
     "Emanwels.randomValue|param|array": "la llista de què s'obté el valor"
 }

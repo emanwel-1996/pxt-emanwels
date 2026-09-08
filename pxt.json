@@ -9,7 +9,6 @@
     },
     "files": [
         "emanwels.ts",
-        "enums.ts",
         "README.md",
         "tutorial-info-cache.json",
         "_locales/es-ES/emanwels-strings.json",

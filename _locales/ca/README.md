@@ -11,9 +11,8 @@
 - Joc de reflexos
     - pressiona el botó depenent del que es mostri a la pantalla
 - Joc de memòria
-    - pressiona la seqüència de botons o pins mostrada a la pantalla un cop s'acabi la mostrança
+    - pressiona la seqüència de botons i pins mostrada a la pantalla un cop s'acabi la mostrança
     - *A*/*B*: botó A/B, *+*: ambdós botons, *0/1/2*: pins P0/P1/P2
-    - depenent de la manera la seqüència constarà de només botons, pins o tots dos
 ### Eines
 - Conversor de lletres a codi morse
     - es pot fer servir com un argument del tipus cadena

@@ -9,9 +9,8 @@
     - press button A to switch hands and button B to confirm it
     - the radio group must be set before calling the function
 - Memory game
-    - press the sequence of buttons or pins shown in screen once the display ends
+    - press the sequence of buttons and pins shown in screen once the display ends
     - *A*/*B*: button A/B, *+*: both buttons, *0*/*1*/*2*: pins P0/P1/P2, *L*: touch logo pin
-    - depending on the mode the sequence will contain only buttons, pins, or both respectively
 ### Tools
 - Latin script to Morse code converter
     - it can be used as a string argument

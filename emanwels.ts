@@ -32,10 +32,10 @@ namespace Emanwels {
      * Runs a rock paper scissors game for the specified number of round
      * @param rounds number of rounds to play
      */
-    //% block="play rock paper scissors for %rounds rounds" group="Games" weight=3
+    //% block="play rock paper scissors" group="Games" weight=3
     //% rounds.shadow="math_number"
     //% rounds.defl=5
-    export function rps(rounds: number): void {
+    export function rps(): void {
         let hand: number = 0;
         let opponentsHand: number;
         let turn: boolean = true;
@@ -55,7 +55,7 @@ namespace Emanwels {
             }
         });
         basic.forever((): void => {
-            if (wins + losses + draws >= rounds) {
+            if (wins + losses + draws >= 5) {
                 basic.showString("GAME OVER!", 80);
                 basic.pause(200);
                 if (wins > losses) {
@@ -72,14 +72,10 @@ namespace Emanwels {
                 }
                 basic.pause(700);
                 basic.showString(`${wins} vs. ${losses}`, 80);
-                if (forever) {
-                    wins = 0;
-                    losses = 0;
-                    draws = 0;
-                    turn = true;
-                } else {
-                    return;
-                }
+                wins = 0;
+                losses = 0;
+                draws = 0;
+                turn = true;
             }
             if (turn) {
                 showHand(hand);
@@ -153,95 +149,10 @@ namespace Emanwels {
     }
 
     /**
-     * Runs a reflexes game
-     * @param difficulty the difficulty of the game
-     */
-    //% block="play a $difficulty reflexes game" group="Games" weight=1
-    export function reflexes(difficulty: Difficulty): void {
-        let button: number = 0;
-        let turn: boolean = false;
-        let won: boolean = false;
-        let time: number = difficulty;
-        let score: number = 0;
-        input.onButtonPressed(Button.A, (): void => {
-            if (turn && button == 0) {
-                won = true;
-                turn = false;
-            } else if (turn && button != 0) {
-                won = false;
-                turn = false;
-            }
-        });
-        input.onButtonPressed(Button.B, (): void => {
-            if (turn && button === 1) {
-                won = true;
-                turn = false;
-            } else if (turn && button != 1) {
-                won = false;
-                turn = false;
-            }
-        });
-        input.onButtonPressed(Button.AB, (): void => {
-            if (turn && button === 2) {
-                won = true;
-                turn = false;
-            } else if (turn && button != 2) {
-                won = false;
-                turn = false;
-            }
-        });
-        basic.forever((): void => {
-            button = randint(0, 3);
-            time = difficulty;
-            won = false;
-            turn = false;
-            basic.pause(randint(300, 1500));
-            if (button === 0) {
-                basic.showString("A");
-            } else if (button === 1) {
-                basic.showString("B");
-            } else if (button === 2) {
-                basic.showString("+");
-            } else {
-                basic.showString("O");
-            }
-            turn = true;
-            while (turn && time > 0) {
-                if (button === 3) {
-                    if (input.buttonIsPressed(Button.A) || input.buttonIsPressed(Button.B)) {
-                        won = false;
-                        turn = false;
-                    }
-                }
-                basic.pause(1);
-                time--;
-            }
-            if (button == 3 && turn) {
-                won = true;
-                turn = false;
-            }
-            if (won) {
-                music.play(music.tonePlayable(Note.C5, music.beat(BeatFraction.Half)), music.PlaybackMode.InBackground);
-                score++;
-                basic.showIcon(IconNames.Happy);
-                basic.pause(100);
-            } else {
-                music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.InBackground);
-                basic.showIcon(IconNames.Sad);
-                basic.pause(100);
-                basic.clearScreen();
-                basic.showString(`SCORE: ${score}`, 100);
-                score = 0;
-            }
-        });
-    }
-
-    /**
      * Runs a memory game
-     * @param mode the mode of the game
      */
-    //% block="play a $mode memory game" group="Games"weight=0
-    export function memory(mode: Mode): void {
+    //% block="play memory" group="Games" weight=1
+    export function memory(): void {
         let turn: boolean = false;
         const original: string[] = [];
         const inputted: string[] = [];
@@ -296,13 +207,7 @@ namespace Emanwels {
             basic.pause(100);
             turn = false;
             inputted.length = 0;
-            if (mode === Mode.Buttons) {
-                original.push(Emanwels.randomValue(["A", "B", "+"]));
-            } else if (mode === Mode.Pins) {
-                original.push(Emanwels.randomValue(["0", "1", "2", "L"]));
-            } else {
-                original.push(Emanwels.randomValue(["A", "B", "+", "0", "1", "2", "L"]))
-            }
+            original.push(Emanwels.randomValue(["A", "B", "+", "0", "1", "2", "L"]));
             for (const input of original) {
                 basic.showString(input);
                 basic.pause(300);
@@ -324,6 +229,7 @@ namespace Emanwels {
         });
     }
 
+
     // TOOLS
 
     const l: string[] = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", ",", "?", " "];
@@ -331,12 +237,12 @@ namespace Emanwels {
 
     /**
      * Converts Latin characters to Morse code
-     * @param object the text to convert
+     * @param latin the text to convert
      */
-    //% block="convert %object to Morse" group="Tools" weight=2
-    export function Morse(object: string): string {
+    //% block="convert %latin to Morse" group="Tools" weight=2
+    export function latinToMorse(latin: string): string {
         let result: string = "";
-        for (const letter of object.toUpperCase()) {
+        for (const letter of latin.toUpperCase()) {
             if (l.indexOf(letter) >= 0) {
                 result += m[l.indexOf(letter)] + " ";
             }
@@ -346,12 +252,12 @@ namespace Emanwels {
 
     /**
      * Converts Morse code to Latin characters
-     * @param object the code to convert
+     * @param morse the code to convert
      */
-    //% block="convert %object to Latin" group="Tools" weight=1
-    export function Latin(object: string): string {
+    //% block="convert %morse to Latin" group="Tools" weight=1
+    export function morseToLatin(morse: string): string {
         let result: string = "";
-        for (const code of object.split(" ")) {
+        for (const code of morse.split(" ")) {
             if (m.indexOf(code) >= 0) {
                 result += l[m.indexOf(code)];
             }

@@ -1,13 +1,12 @@
 {
     "Emanwels": "Cualquier función que se le ocurra a Emanwel estará aquí",
-    "Emanwels.rps": "Ejecuta piedra, papel o tijeras por el número de rondas especificado",
-    "Emanwels.rps|param|rounds": "el número de rondas a jugar",
+    "Emanwels.rps": "Ejecuta piedra, papel o tijeras por cinco rondas",
     "Emanwels.reflexes": "Ejecuta un juego de reflejos.\nPresiona el botón mostrado en la pantalla («+» quiere decir A+B y «O» quiere decir ningún botón)",
     "Emanwels.reflexes|param|difficulty": "la dificultad del juego",
     "Emanwels.memory": "Ejecuta un juego de memoria",
-    "Emanwels.Morse": "Convierte letras a código morse",
-    "Emanwels.Morse|param|object": "el texto a convertir",
-    "Emanwels.Latin": "Convierte código morse a letras",
-    "Emanwels.Latin|param|object": "el texto a convertir",
+    "Emanwels.latinToMorse": "Convierte letras a código morse",
+    "Emanwels.latinToMorse|param|latin": "el texto a convertir",
+    "Emanwels.morseToLatin": "Convierte código morse a letras",
+    "Emanwels.morseToLatin|param|morse": "el texto a convertir",
     "Emanwels.randomValue": "Obtiene un valor de un arreglo"
 }
