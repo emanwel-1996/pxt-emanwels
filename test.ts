@@ -1,2 +1,1 @@
-let a = Emanwels.Latin("ñ")
-console.log(a)
+basic.showString("HEY!", 70)

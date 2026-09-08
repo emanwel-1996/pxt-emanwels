@@ -57,22 +57,22 @@ namespace Emanwels {
         });
         basic.forever((): void => {
             if (wins + losses + draws >= rounds) {
-                basic.showString("GAME OVER!");
+                basic.showString("GAME OVER!", 80);
                 basic.pause(200);
                 if (wins > losses) {
                     music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.InBackground);
-                    basic.showString("YOU WIN!");
+                    basic.showString("YOU WIN!", 80);
                 } else if (wins < losses) {
                     music.play(music.builtinPlayableSoundEffect(soundExpression.hello), music.PlaybackMode.UntilDone);
                     music.play(music.builtinPlayableSoundEffect(soundExpression.hello), music.PlaybackMode.UntilDone);
                     music.play(music.builtinPlayableSoundEffect(soundExpression.hello), music.PlaybackMode.InBackground);
-                    basic.showString("YOU LOSE!");
+                    basic.showString("YOU LOSE!", 80);
                 } else {
                     music.play(music.builtinPlayableSoundEffect(soundExpression.yawn), music.PlaybackMode.InBackground);
-                    basic.showString("DRAW!");
+                    basic.showString("DRAW!", 80);
                 }
                 basic.pause(700);
-                basic.showString(`${wins} vs. ${losses}`);
+                basic.showString(`${wins} vs. ${losses}`, 80);
                 if (forever) {
                     wins = 0;
                     losses = 0;
@@ -231,8 +231,7 @@ namespace Emanwels {
                 basic.showIcon(IconNames.Sad);
                 basic.pause(100);
                 basic.clearScreen();
-                basic.showString("SCORE:");
-                basic.showNumber(score);
+                basic.showString(`SCORE: ${score}`, 100);
                 score = 0;
             }
         });
