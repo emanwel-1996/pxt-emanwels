@@ -16,7 +16,7 @@
     - *A*/*B*: button A/B, *+*: both buttons, *0*/*1*/*2*: pins P0/P1/P2, *L*: touch logo pin
     - depending on the mode the sequence will contain only buttons, pins, or both respectively
 ### Tools
-- Latin script to Morse Code converter
+- Latin script to Morse code converter
     - it can be used as a string argument
     - returns the same text but in Morse code
     - if the text to be converted includes characters other than ASCII alphanumeric characters, '.', ',', '?', or spaces, the program will likely produce an error
