@@ -25,3 +25,5 @@
     - devuelve el mismo texto (si está en morse) pero en letras
     - si el texto a ser convertido incluye caracteres que no sean puntos, comas, barras, espacios o códigos de letra que no pueden ser convertidos  a caracteres alfanuméricos ASCII no devolverá nada
 - Selector aleatorio de valores
+    - puede usarse como un argumento de los tipos de los valores del arreglo
+    - devuelve un valor aleatorio de un arreglo
