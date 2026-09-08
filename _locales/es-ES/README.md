@@ -19,9 +19,9 @@
 - Conversor de letras a código morse
     - puede usarse como un argumento del tipo cadena
     - devuelve el mismo texto pero en morse
-    - si el texto a ser convertido incluye caracteres que no sean caracteres alfanuméricos ASCII, puntos, comas, signos de interrogación de cierre o espacios, el programa probablemente dará error
+    - si el texto a ser convertido incluye caracteres que no sean caracteres alfanuméricos ASCII, puntos, comas, signos de interrogación de cierre o espacios, no devolverá nada
 - Conversor de código morse a letras
     - puede usarse como un argumento del tipo cadena
     - devuelve el mismo texto (si está en morse) pero en letras
-    - si el texto a ser convertido incluye caracteres que no sean puntos, comas, barras, espacios o códigos de letra que no pueden ser convertidos  a caracteres alfanuméricos ASCII
+    - si el texto a ser convertido incluye caracteres que no sean puntos, comas, barras, espacios o códigos de letra que no pueden ser convertidos  a caracteres alfanuméricos ASCII no devolverá nada
 - Selector aleatorio de valores

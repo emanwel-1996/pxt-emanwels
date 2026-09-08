@@ -19,11 +19,11 @@
 - Latin script to Morse code converter
     - it can be used as a string argument
     - returns the same text but in Morse code
-    - if the text to be converted includes characters other than ASCII alphanumeric characters, periods, commas, question marks, or spaces, the program will likely produce an error
+    - if the text to be converted includes characters other than ASCII alphanumeric characters, periods, commas, question marks, or spaces, it will not return anything
 - Morse code to Latin script converter
     - it can be used as a string argument
     - returns the same text (if it is in Morse code) but in Latin script
-    - if the text to be converter includes characters other than periods, commas, slashes, spaces, or letter codes that can't be converted to ASCII alphanumeric characters, the program will likely produce an error
+    - if the text to be converter includes characters other than periods, commas, slashes, spaces, or letter codes that can't be converted to ASCII alphanumeric characters, it will not return anything
     - the format must be spaces to distinguish letter codes within the same word and ' / ' to separate words
 - Random value selector
     - it can be used as a the array's values' types arguments
