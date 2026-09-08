@@ -206,7 +206,9 @@ namespace Emanwels {
             basic.clearScreen();
             basic.pause(100);
             turn = false;
-            inputted.length = 0;
+            for (let i: number = 0; i < inputted.length; i++) {
+                inputted.pop()
+            }
             original.push(Emanwels.randomValue(["A", "B", "+", "0", "1", "2", "L"]));
             for (const input of original) {
                 basic.showString(input);
@@ -215,7 +217,11 @@ namespace Emanwels {
                 basic.pause(200);
             }
             turn = true;
-            while (!(inputted.length >= original.length)) {}
+            while (!(inputted.length >= original.length)) {
+                if (inputted.length >= original.length) {
+                    break;
+                }
+            }
             turn = false;
             if (inputted != original) {
                 music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.UntilDone);
