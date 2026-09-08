@@ -11,7 +11,7 @@
 - Reflexes game
     - press a button depending on what is shown on the screen
     - *A*/*B*: button A/B, *+*: both buttons, *O*: no buttons
-- Memory Games
+- Memory game
     - press the sequence of buttons or pins shown in screen once the display ends
     - *A*/*B*: button A/B, *+*: both buttons, *0*/*1*/*2*: pins P0/P1/P2, *L*: touch logo pin
     - depending on the mode the sequence will contain only buttons, pins, or both respectively
