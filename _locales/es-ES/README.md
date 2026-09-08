@@ -27,3 +27,4 @@
 - Selector aleatorio de valores
     - puede usarse como un argumento de los tipos de los valores del arreglo
     - devuelve un valor aleatorio de un arreglo
+    
