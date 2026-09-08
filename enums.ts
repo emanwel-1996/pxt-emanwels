@@ -12,6 +12,6 @@ enum Mode {
     Buttons,
     //% block="pins"
     Pins,
-    //% block="buttons & pins"
+    //% block="buttons and pins"
     ButtonsPins
 }

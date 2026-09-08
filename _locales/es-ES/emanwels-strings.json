@@ -3,12 +3,16 @@
     "Emanwels.rps|block": "jugar a piedra, papel o tijeras por %rounds rondas",
     "Emanwels.radioRps|block": "jugar a piedra, papel o tijeras por radio",
     "Emanwels.reflexes|block": "jugar a un juego de reflejos $difficulty",
+    "Emanwels.memory|block": "jugar a un juego de memoria de $mode",
     "Emanwels.Morse|block": "convertir %object a morse",
     "Emanwels.Latin|block": "convertir %object a letras",
     "Emanwels.randomValue|block": "escoge un valor aleatorio de %array",
     "Difficulty.Easy|block": "fácil",
     "Difficulty.Medium|block": "normal",
     "Difficulty.Hard|block": "difícil",
+    "Mode.Buttons|block": "botones",
+    "Mode.Pins|block": "pines",
+    "Mode.ButtonsPins": "botones y pines",
     "{id:group}Games": "Juegos",
     "{id:group}Tools": "Herramientas"
 }

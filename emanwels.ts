@@ -29,7 +29,7 @@ namespace Emanwels {
         }
     }
     /**
-     * Plays Rock Paper Scissors for the specified number of round
+     * Runs a rock paper scissors game for the specified number of round
      * @param rounds number of rounds to play
      * @param forever whether to restart the game after it ends
      */
@@ -109,8 +109,7 @@ namespace Emanwels {
         });
     }
     /**
-     * Plays Rock Paper Scissors against another micro:bit using radio.
-     * The radio group must be configured before calling this function
+     * Runs a rock paper scissors game against another micro:bit using radio
      */
     //% block="play radio rock paper scissors" group="Games" weight=2
     export function radioRps(): void {
@@ -155,8 +154,7 @@ namespace Emanwels {
     }
 
     /**
-     * Plays a reflexes game.
-     * Press the button shown in screen ("+" means A+B and "O" means no button)
+     * Runs a reflexes game
      * @param difficulty the difficulty of the game
      */
     //% block="play a $difficulty reflexes game" group="Games" weight=1
@@ -240,9 +238,12 @@ namespace Emanwels {
         });
     }
 
-    export function simonSays(mode: Mode): void {
+    /**
+     * Runs a memory game
+     */
+    //% block="play a $mode memory game" group="Games"weight=0
+    export function memory(mode: Mode): void {
         let turn: boolean = false;
-        let lost: boolean = false;
         const original: string[] = [];
         const inputted: string[] = [];
         pins.touchSetMode(TouchTarget.P0, TouchTargetMode.Capacitive);
@@ -251,40 +252,49 @@ namespace Emanwels {
         pins.touchSetMode(TouchTarget.LOGO, TouchTargetMode.Capacitive);
         input.onButtonPressed(Button.A, (): void => {
             if (turn) {
+                music.play(music.tonePlayable(Note.C5, music.beat(BeatFraction.Half)), music.PlaybackMode.InBackground);
                 inputted.push("A");
             }
         });
         input.onButtonPressed(Button.B, (): void => {
             if (turn) {
+                music.play(music.tonePlayable(Note.C5, music.beat(BeatFraction.Half)), music.PlaybackMode.InBackground);
                 inputted.push("B");
             }
         });
         input.onButtonPressed(Button.AB, (): void => {
             if (turn) {
+                music.play(music.tonePlayable(Note.C5, music.beat(BeatFraction.Half)), music.PlaybackMode.InBackground);
                 inputted.push("+");
             }
         });
         input.onPinReleased(TouchPin.P0, (): void => {
             if (turn) {
+                music.play(music.tonePlayable(Note.C5, music.beat(BeatFraction.Half)), music.PlaybackMode.InBackground);
                 inputted.push("0");
             }
         });
         input.onPinReleased(TouchPin.P1, (): void => {
             if (turn) {
+                music.play(music.tonePlayable(Note.C5, music.beat(BeatFraction.Half)), music.PlaybackMode.InBackground);
                 inputted.push("1");
             }
         });
         input.onPinReleased(TouchPin.P2, (): void => {
             if (turn) {
+                music.play(music.tonePlayable(Note.C5, music.beat(BeatFraction.Half)), music.PlaybackMode.InBackground);
                 inputted.push("2");
             }
         });
         input.onLogoUp((): void => {
             if (turn) {
+                music.play(music.tonePlayable(Note.C5, music.beat(BeatFraction.Half)), music.PlaybackMode.InBackground);
                 inputted.push("L");
             }
         });
         basic.forever((): void => {
+            basic.clearScreen();
+            basic.pause(100);
             turn = false;
             inputted.length = 0;
             if (mode === Mode.Buttons) {
@@ -301,11 +311,17 @@ namespace Emanwels {
                 basic.pause(200);
             }
             turn = true;
-            while (!(inputted.length >= original.length)) {
-                if (inputted.length >= original.length) {
-                    break;
-                }
+            while (!(inputted.length >= original.length)) {}
+            turn = false;
+            if (inputted != original) {
+                music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.UntilDone);
+                basic.showIcon(IconNames.Sad);
+                original.length = 0;
+            } else {
+                basic.showIcon(IconNames.Happy);
+                music.play(music.tonePlayable(Note.C5, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone);
             }
+            basic.pause(500);
         });
     }
 
