@@ -220,7 +220,9 @@ namespace Emanwels {
             if (inputted != original) {
                 music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.UntilDone);
                 basic.showIcon(IconNames.Sad);
-                original.length = 0;
+                for (let i: number = 0; 1 > original.length; i++) {
+                    original.pop();
+                }
             } else {
                 basic.showIcon(IconNames.Happy);
                 music.play(music.tonePlayable(Note.C5, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone);
@@ -228,7 +230,6 @@ namespace Emanwels {
             basic.pause(500);
         });
     }
-
 
     // TOOLS
 
